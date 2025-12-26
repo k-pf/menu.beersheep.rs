@@ -15,11 +15,12 @@ EXPECTED_HEADER = [
     "brewery",
     "name",
     "style",
+    "country",
     "abv",
     "image_url",
     "description",
-    "price_big",
     "price_small",
+    "price_big",
 ]
 
 TAPLIST = Path(PARENT_DIR / "assets/taplist.csv").read_text()
@@ -36,10 +37,14 @@ def format_image(beer):
         return '<div class="placeholder"><i class="fas fa-beer"></i></div>'
 
 
+def format_brewery(beer):
+    return f"{beer['brewery']}, {beer['country']}"
+
+
 def gen_snippet(beer):
     return SNIPPET_TEMPLATE.format(
         title=format_title(beer),
-        brewery=beer["brewery"],
+        brewery=format_brewery(beer),
         beerstyle=beer["style"],
         abv=beer["abv"],
         image_snippet=format_image(beer),
