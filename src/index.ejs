@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
-    <%- partials.head %>
-        <meta property="og:updated_time" content="<%= new Date().toISOString() %>" />
+    <% if (process.env.NODE_ENV==='production' ) { %>
+        <%- partials.gtag %>
+            <% } %>
+                <%- partials.head %>
+                    <meta property="og:updated_time" content="<%= new Date().toISOString() %>" />
 
 </head>
 

@@ -96,6 +96,7 @@ const partials = {
     head: readTemplate('./src/partials/head.ejs'),
     header: readTemplate('./src/partials/header.ejs'),
     footer: readTemplate('./src/partials/footer.ejs'),
+    gtag: readTemplate('./src/partials/gtag.ejs'),
 };
 
 async function build() {
