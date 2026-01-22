@@ -60,16 +60,10 @@ h1 {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #333;
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.beer-snippet:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
 .beer-header {
